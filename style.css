@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 250px 1fr;
+  min-height: 100vh;
+}
+.top__level {
+  grid-column: auto;
+  grid-row: 1/2;
+  background-image: url(./images/bg-desktop-light.jpg);
+  height: 250px;
+}
+.bottom__level {
+  grid-column: auto;
+  grid-row: 2/3;
+}
+.top__portion {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  width: max(40%, 500px);
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 4em;
+  gap: 1em;
+}
+.todo__header {
+  grid-column: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo__header img {
+  cursor: pointer;
+}
+.todo__header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5em;
+}
+.todo__input {
+  display: grid;
+  grid-template-columns: 2.5em 1fr;
+  grid-template-rows: 4em;
+  background-color: white;
+  border-radius: 0.3em;
+}
+.circle1 {
+  width: 1.5em;
+  height: 1.5em;
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+  border: 2px solid lightgray;
+}
+.input {
+  width: 100%;
+  border: none;
+  outline: 0;
+  border-radius: 0.3em;
+  padding-left: 1em;
+  font-size: 1rem;
+}
+.input::placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.todo__list {
+  width: max(40%, 500px);
+  margin: -1em auto 0;
+  border-radius: 0.5em;
+}
+.todo__addition {
+  display: grid;
+  grid-template-columns: 3em 1fr 3em;
+  grid-template-rows: 4em;
+}
+.todo__addition:first-child {
+  border-radius: 0.5em 0.5em 0 0;
+}
+.todo__points {
+  padding-left: 1em;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.circle2 {
+  width: 1.5em;
+  height: 1.5em;
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+  border: 2px solid lightgray;
+  cursor: pointer;
+}
+.todo__functionality {
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 700;
+  padding: 0 0.5em 0 0.5em;
+  border-radius: 0 0 0.5em 0.5em;
+}
+.function__list {
+  display: flex;
+}
+.all {
+  cursor: pointer;
+}
+.function__list p + p {
+  padding-left: 1.2em;
+  cursor: pointer;
+}
+.function__list p:hover {
+  color: hsl(220, 98%, 61%);
+}
+.check {
+  background-image: url(./images/icon-check.svg),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+.drag_drop {
+  text-align: center;
+  margin: 3em 0;
+  font-size: 0.8rem;
+}
+.clear {
+  cursor: pointer;
+  padding-left: 1em;
+  padding-right: 0;
+}
+.clear:hover {
+  color: hsl(220, 98%, 61%);
+}
+.hidden {
+  display: none;
+}
+.cancelX {
+  background-image: url(./images/icon-cross.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  cursor: pointer;
+  display: none;
+}
+.todo__addition:hover > .cancelX {
+  display: block;
+}
+
+.theme__1 .top__level {
+  background-image: url(./images/bg-desktop-light.jpg);
+  height: 250px;
+}
+.theme__1 {
+  color: hsl(235, 19%, 35%);
+}
+.theme__1 .todo__list {
+  background-color: hsl(236, 33%, 92%);
+}
+.theme__1 .bottom__level {
+  background-color: hsl(236, 33%, 92%);
+}
+.theme__1 .todo__functionality {
+  background-color: white;
+  border-top: 1px solid lightgray;
+}
+.theme__1 .todo__addition {
+  background-color: white;
+  border-top: 1px solid lightgray;
+}
+
+.theme__2 .top__level {
+  background-image: url(./images/bg-desktop-dark.jpg);
+  height: 250px;
+}
+.theme__2 {
+  color: hsl(234, 39%, 85%);
+}
+.theme__2 .todo__input {
+  background-color: hsl(235, 24%, 19%);
+}
+.theme__2 .input {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+}
+.theme__2 .todo__functionality {
+  background-color: hsl(235, 24%, 19%);
+  border-top: 1px solid hsl(234, 11%, 52%);
+}
+.theme__2 .todo__addition {
+  background-color: hsl(235, 24%, 19%);
+  border-top: 1px solid hsl(234, 11%, 52%);
+}
+.theme__2 .bottom__level {
+  background-color: hsl(235, 21%, 11%);
+}
+
+@media screen and (max-width: 540px) {
+  .top__portion {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 4em;
+    gap: 2em;
+  }
+  .todo__list {
+    width: 80%;
+    margin: -1em auto 0;
+  }
+  .todo__functionality {
+    height: 4em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0;
+    row-gap: 1em;
+    background-color: none;
+  }
+  .input {
+    padding-left: 0.7em;
+    font-size: 0.9rem;
+  }
+  .input::placeholder {
+    font-size: 0.9rem;
+  }
+  .counter {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0.7em 0 0.7em 1em;
+    font-size: 0.9rem;
+  }
+  .clear {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: right;
+    font-size: 0.9rem;
+    padding: 0.7em 1em 0.7em 0;
+  }
+  .function__list {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-content: center;
+    padding: 0.7em 0;
+  }
+
+  .theme__1 .todo__functionality {
+    background-color: inherit;
+    border-top: 1px solid hsl(234, 11%, 52%);
+  }
+  .theme__1 .todo__functionality p {
+    background-color: white;
+  }
+  .theme__1 .todo__functionality .function__list {
+    background-color: white;
+  }
+
+  .theme__2 .todo__functionality {
+    background-color: inherit;
+  }
+  .theme__2 .todo__functionality p {
+    background-color: hsl(235, 24%, 19%);
+  }
+  .theme__2 .todo__functionality .function__list {
+    background-color: hsl(235, 24%, 19%);
+  }
+}
+
+@media screen and (max-width: 358px) {
+  .clear {
+    font-size: 0.7rem;
+    padding: 0.7em 1em 0.7em 0;
+  }
+  .counter {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0.7em 0 0.7em 0.5em;
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 255px) {
+  .counter {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 1.1em 0 1.1em 0.5em;
+  }
+}

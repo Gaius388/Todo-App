@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO_APP</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container theme__1">
+      <div class="top__level">
+        <div class="top__portion">
+          <div class="todo__header">
+            <h1>TODO</h1>
+            <span
+              ><img
+                src="./images/icon-moon.svg"
+                alt="icon-moon"
+                class="icon__img"
+            /></span>
+          </div>
+          <div class="todo__input">
+            <div class="circle1"></div>
+            <input
+              type="text"
+              class="input"
+              placeholder="Create a new todo..."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="bottom__level">
+        <div class="todo__list" id="list">
+          <div class="todo__functionality">
+            <p class="counter">0 items left</p>
+            <div class="function__list">
+              <p class="all">All</p>
+              <p class="active">Active</p>
+              <p class="completed">Completed</p>
+            </div>
+            <p class="clear">Clear Completed</p>
+          </div>
+        </div>
+        <p class="drag_drop">Drag and drop to reorder list</p>
+      </div>
+    </div>       
+  </body>
+</html>
